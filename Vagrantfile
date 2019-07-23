@@ -28,7 +28,7 @@ Vagrant.configure("2") do |config|
   	end
 
   	web.vm.provision "shell", path: "web.sh"
-    
+    #web.vm.provision "file", source: "./ansible", destination: "$HOME/"
   end
 
   config.vm.define "db" do |db|
@@ -43,7 +43,7 @@ Vagrant.configure("2") do |config|
   	end
 
   	db.vm.provision "shell", path: "db.sh"
-
+    #db.vm.provision "file", source: "", destination: "$HOME/"
   end
 
 end
